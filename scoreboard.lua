@@ -1,3 +1,4 @@
+-- Made by FAXES
 local listOn = false
 
 Citizen.CreateThread(function()
