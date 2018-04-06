@@ -1,4 +1,3 @@
--- Made by FAXES
 local listOn = false
 
 Citizen.CreateThread(function()
@@ -11,11 +10,13 @@ Citizen.CreateThread(function()
                 local players = {}
                 ptable = GetPlayers()
                 for _, i in ipairs(ptable) do
-                    table.insert(players,
-                    '<tr style="color: rgb(255, 255, 255); font-weight: 500;"><td>' .. GetPlayerServerId(i) .. '</td><td>' ..GetPlayerName(i)..'</td></tr>' -- The "color: rgb" sets the color of the list
+                    local wantedLevel = GetPlayerWantedLevel(i)
+                    r, g, b = GetPlayerRgbColour(i)
+                    table.insert(players, 
+                    '<tr style="color: rgb(255, 255, 255); font-weight: 500;"><td>' .. GetPlayerServerId(i) .. '</td><td>' ..GetPlayerName(i)..'</td></tr>'
                     )
                 end
-
+                
                 SendNUIMessage({ text = table.concat(players) })
 
                 listOn = true
