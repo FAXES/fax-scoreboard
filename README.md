@@ -1,7 +1,22 @@
-# fax-scoreboard
+### 📠 [Fax-Scoreboard][5mlink] 📠
 
-Is a nice modern looking scroeboard. Center of the screen with a trasparent background and nice looking player list
+[![Discord](https://faxes.zone/i/9wkr3.png)](https://faxes.zone/discord)
 
-**Note:** the resource name must remain as `fax-scoreboard`.
+----
 
-Original FiveM Forums Post - https://forum.fivem.net/t/modern-scoreboard-fax-scoreboard-1-3/84241
+Is a nice modern looking scoreboard. Center of the screen with a transparent background and nice looking player list. This is a edited version of the original scoreboard for FiveM.
+
+**Documentation:**
+- [FAXES Documentation Site](https://docs.faxes.zone/docs)
+- [FAXES ACE Permission Documentation](https://docs.faxes.zone/docs/aceperms)
+- [Getting Your Steam Hexadecimal](https://docs.faxes.zone/docs/getting-your-steam-hex)
+
+**Credits:**
+- FAXES
+- Astra 
+
+<br />
+
+[![FiveM](https://faxes.zone/i/r5byi.png)][5mlink]
+
+[5mlink]: https://forum.cfx.re/t/84241

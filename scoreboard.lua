@@ -8,12 +8,12 @@ Citizen.CreateThread(function()
         if IsControlPressed(0, 27)--[[ INPUT_PHONE ]] then
             if not listOn then
                 local players = {}
-                ptable = GetPlayers()
+                local ptable = GetActivePlayers()
                 for _, i in ipairs(ptable) do
                     local wantedLevel = GetPlayerWantedLevel(i)
                     r, g, b = GetPlayerRgbColour(i)
                     table.insert(players, 
-                    '<tr style="color: rgb(255, 255, 255); font-weight: 500;"><td>' .. GetPlayerServerId(i) .. '</td><td>' ..GetPlayerName(i)..'</td></tr>'
+                     '<tr style=\"color: rgb(' .. 255 .. ', ' .. 255 .. ', ' .. 255 .. ')\"><td>' .. GetPlayerServerId(i) .. '</td><td>' .. sanitize(GetPlayerName(i)) .. '</td><td>' .. '</td></tr>'
                     )
                 end
                 
@@ -35,14 +35,14 @@ Citizen.CreateThread(function()
     end
 end)
 
-function GetPlayers()
-    local players = {}
-
-    for i = 0, 31 do
-        if NetworkIsPlayerActive(i) then
-            table.insert(players, i)
-        end
-    end
-
-    return players
+function sanitize(txt)
+    local replacements = {
+        ['&' ] = '&amp;', 
+        ['<' ] = '&lt;', 
+        ['>' ] = '&gt;', 
+        ['\n'] = '<br/>'
+    }
+    return txt
+        :gsub('[&<>\n]', replacements)
+        :gsub(' +', function(s) return ' '..('&nbsp;'):rep(#s-1) end)
 end
