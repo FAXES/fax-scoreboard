@@ -5,27 +5,28 @@ html {
 }
 
 #wrap {
-	width: 15%;
+	width: 20%;
 	/* min-height: 220px; */
 	margin-top: 15%;
 	margin-left: auto;
 	margin-right: auto;
 	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
     color: rgba(255, 255, 255, 0.9);
-	background-color: rgba(7, 7, 7, 0.5); /* Table Heading Background Color */
-	overflow-y: scroll;
+	border-radius: 0.5rem;
+	background-color: rgba(29, 29, 29, 0.74); /* Table Heading Background Color */
+	padding: 25px;
+	overflow-y: hidden;
 	overflow-x: hidden;
 }
 
 table {
-	text-align: left;
-}
-
-th, td {
-	padding-left: 20px;
+	text-align: center;
+	width: 100%;
+	margin-left: 4.3rem;
 }
 
 th {
+	text-align: center;
 	padding-top: 10px;
 	height: 40px;
 }
@@ -35,15 +36,15 @@ tr {
 	font-family: 'Segoe UI';
 }
 
-tr.heading {
-		color: #e81b00; /* Table Heading Text Color */
+tr .heading {
+		color: #ffffff; /* Table Heading Text Color */
 		font-weight: 500; /* Makes the header font bold */
 }
 
 #tit {
-		color: #e81b00; /* Table Heading Text Color */
+		color: #ffffff; /* Table Heading Text Color */
 		font-weight: 500; /* Makes the header font bold */
-		font-size: 120%;
+		font-size: 200%;
 	    font-family: 'Segoe UI';
 }
 
